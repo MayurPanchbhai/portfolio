@@ -6,10 +6,10 @@
     <title>Mayur Panchbhai</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body >
 
     <!-- header starts -->
-    <header>
+    <header id="header">
         <div id="fix">
             <div>
                 <h1 id="logo">PanchbhaiMayur</h1>
@@ -24,25 +24,35 @@
         
 
     </header>
-    <div id="resDiv">
+    
+    <div id="resDiv" >
         <div id="name">
             <h1>PanchbhaiMayur</h1>
         </div>
         
         <div id="option">
-            <button click="openHeader" >X</button>
+            <button onclick="openHeader()" >X</button>
+        </div>
+        
+    </div>
+    <div id="headerFPhone" onclick="closeHeader()">
+        <div>
+            <a class="" href="#Home" id="link1" onclick="openHeader()">Home</a>
+            <a class="" href="#about" id="link2" onclick="openHeader()">About</a>
+            <a class="" href="" id="link3" onclick="openHeader()">Projects</a>
+            <a class="" href="" id="link4" onclick="openHeader()">Contact</a>
         </div>
         
     </div>
 
-    <main id="Home">
+    <main id="Home" onclick="closeHeader()">
         <div>
             <div class="hero-text">
                 <h1>Front-End<br> Developer <img src="Images/waving.png" alt="" id="hey"></h1>
                 
                 <p>Hi, I'm Mayur Panchbhai. A passionate Front-end <br> Developer based in Nagpur, India. 📍</p>
                 <span>
-                    <a href=""><img src="./Images/linkedin.svg" alt="" height="25"></a>
+                    <a href="https://www.linkedin.com/in/panchbhaimayur-921131242/"><img src="./Images/linkedin.svg" alt="" height="25"></a>
                     <a href=""><img src="./Images/github-square.svg" alt="" height="25"></a>
                 </span>
             </div>
@@ -50,7 +60,7 @@
 
             </div>
         </div>
-        <div id="tech-stack-parent">
+        <div id="tech-stack-parent" onclick="closeHeader()">
             <div id="tech-stack">
                 <h1>Tech Stack</h1>
                 <hr>
@@ -67,7 +77,7 @@
 
 
     <!-- about section  -->
-    <section id="section-about">
+    <section id="section-about" onclick="closeHeader()">
         <div id="about">
             <div id="about-child">
                 <div id="about-img">
@@ -93,5 +103,8 @@
     
 
 
+
+
+    <script src="script.js"></script>
 </body>
 </html>
