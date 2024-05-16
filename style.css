@@ -7,6 +7,7 @@
 body{
     width: 100%;
     height: 100vh;
+    /* overflow: hidden; */
 }
 
 #logo{
@@ -18,7 +19,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 2%;
+    /* padding: 0 2%; */
     z-index: 99;
     /* height: 2vh; */
     /* position:fixed;
@@ -84,27 +85,77 @@ main{
     /* position: absolute; */
     width: 100%;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: center;
 
 }
 
 main div{
     width: 80%;
-    margin: 5% 0;
+    margin-top: 5%;
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     align-content: flex-start;
 }
 
 .hero-text{
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     /* height: 5; */
+    padding: 0 2%;
+    width: 45%;
+    height: 100%;
+    justify-content: flex-start;
+    /* line: gap 2%; */
+}
+
+.hero-text h1{
+    font-size: 5vw;
+    margin-bottom: 4%;
+}
+
+.hero-text p{
+    margin-bottom: 4%;
 }
 
 
 
-
 #hey{
-    width: 20px;
+    width: 7%;
+}
+#tech-stack{
+    display: flex;
+    align-items: center;
+}
+
+#tech-stack img,
+#tech-stack hr{
+    margin-left: 2%;
+    transition: 300ms ease-in-out;
+}
+#tech-stack h1{
+    font-size: larger;
+}
+
+#tech-stack hr{
+
+    color: black;
+    width: 4%;
+    rotate: 90deg;
+    border: 1px solid;
+    
+}
+
+#tech-stack-parent{
+    display: flex;
+    justify-content: flex-start;
+    /* width: 50%; */
+    
+}
+
+#tech-stack img:hover{
+    /* transform: translate(x-large); */
+    /* background-color: black; */
+    transform: translateY(-10px);
 }
