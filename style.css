@@ -24,8 +24,12 @@ body{
 
 }
 
+#xMenu{
+    display: none;
+}
+
 #logo{
-    font-size:x-large;
+    font-size:3.4vmin;
 }
 
 header{
@@ -42,6 +46,11 @@ header{
     /* border: 1px solid; */
     /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;*/
      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+a:hover{
+    color: #147efb;
+    transition:all 200ms ease-in-out;
 }
 
 #headerFPhone{
@@ -65,7 +74,7 @@ header{
     color: black;
     font-family: Mulish, sans-serif;
     font-weight: 700;
-    font-size: large;
+    font-size: 1.3vw;
     text-decoration: none;
 }
 
@@ -214,16 +223,16 @@ main div{
 #about-img span{
     background-color: #fff;
     border-radius: 50%;
-    bottom: -31px;
-    height: 12rem;
+    bottom: -3%;
+    height: 13vw;
     position: absolute;
-    right: 8px;
-    width: 12rem;
+    right: -1%;
+    width: 13vw;
 }
 #about-img span img{
     -webkit-animation: rotate 9s linear infinite;
     animation: rotate 9s linear infinite;
-    width: 12rem;
+    width: 13vw;
 }
 #about-text{
     width: 50%;
@@ -241,17 +250,17 @@ main div{
 }
 
 .work-emoji{
-    bottom: 38px;
+    bottom: 9%;
     position: absolute;
-    right: 72px;
-    width: 4rem !important;
+    right: 8.2%;
     z-index: 10;
+    width: 6vw !important;
 }
 
 .img-side__main-img{
     border-radius: 20px;
-    height: 23rem;
-    width: 28rem;
+    height: 32vw;
+    width: 38vw;
 }
 
 #ruler{
@@ -287,7 +296,7 @@ main div{
     background-color: var(--backgroundProject);
 }
 
-#project h1{
+#project h2{
     margin-bottom: 2%;
 }
 
@@ -370,7 +379,7 @@ padding: 2% 6%;
 
 
 /* header responsive */
-@media (max-width :480px){
+@media (max-width :720px){
     #header{
         display: none;
     }
