@@ -281,7 +281,7 @@ main div{
 /* project section  */
 
 :root{
-    --backgroundProject:#e7e7e7;
+    --backgroundProject:#e7e7e7;/*#f9f9f9;*/
     --borderProject:#ffffff;
     --appDivBg:hsl(180, 5%, 92%);
     --fontProjcect:#e8e7ef;
