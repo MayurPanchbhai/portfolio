@@ -103,6 +103,36 @@ button{
 .hourly-item img{
     width: 47%;
 }
+
+@media screen and (min-width:481px) and (max-width:768px){
+    #content{
+        width: 55%;
+    }
+    h2,
+    input,
+    button,
+    #temp-div,
+    #weather-info p,
+    .hourly-item span{
+        font-size: 2vw;
+    }
+}
+
+
+@media (max-width:480px) {
+    #content{
+        width: 65%;
+    }
+    h2,
+    input,
+    button,
+    #temp-div,
+    #weather-info p,
+    .hourly-item span{
+        font-size: 3vw;
+    }
+
+}
 /* body {
     background: #8C52FF;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
