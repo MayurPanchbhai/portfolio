@@ -28,3 +28,23 @@ function closeHeader(){
        openHeader();
     }
 }
+
+
+
+
+
+// project section image effect
+let infoLoad1=document.getElementById("projInfo1");
+let infoCount1=0
+function getBlurInfo(){
+    if (infoCount1%2==0) {
+        infoLoad1.style.display="flex";
+        infoCount1++;
+    }
+    else{
+        infoLoad1.style.display="none";
+        infoCount1++;
+    }
+
+    
+}
