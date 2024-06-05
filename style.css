@@ -302,12 +302,14 @@ main div{
     display: flex;
     /* height: 100%; */
     padding: 2%;
+    /* justify-content: center; */
+    align-items: center;
     
 }
 
 .projectImage{
-    width: 50%;
-    height: 20vw;
+    width: 55%;
+    height: 25vw;
     position: relative;
     border-radius: 20px 20px 0px 20px / 20px 20px 0px 20px ;
 }
@@ -321,12 +323,33 @@ main div{
 }
 
 .projectData{
-    width: 50%;
+    width: 40%;
     padding: 2% 5%;
     border-radius: 20px 20px 0px 20px / 20px 20px 0px 20px ;
+    /* line-height: ; */
+    display: flex;
+    flex-direction: column;
+    /* align-content: space-around; */
+    justify-content: space-;
 }
 
+.projectData label{
+    
+    margin-top: 3%;
+}
+
+.projectData ul{
+    
+    margin-left:4%;
+    margin-top: 1%;
+    line-height: 160%;
+}
+
+
+
 #projInfo1{
+    /* display:none; */
+    /* transition-duration: 3s ; */
     display: flex;
     padding: 2% 5%;
     position: absolute;
@@ -334,9 +357,49 @@ main div{
     width: -webkit-fill-available;
     height: -webkit-fill-available;
     border-radius: 5px 5px 0px 5px / 5px 5px 0px 5px ;
-    transition: background-color 0.3s;
+    /* transition: background-color 5s ease-in-out; */
+    /* transition-duration: 3s; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+#projInfo1 p{
+    margin:4% 0;
+    font-size: 1.7vw;
+    color: var(--primary);
 }
 
+#projInfo1 a{
+    border: 2px solid var(--primary);
+    padding: 1% 2%;
+    text-decoration: none;
+    border-radius: 5px 5px 0px 5px / 5px 5px 0px 5px ;
+    background-color: var(--primary);
+    transition: 500ms ease-in-out;
+}
+
+#projInfo1 a:hover{
+    transform: translateY(-3px);
+    color: var(--txt1);
+}
+
+.infoAni{
+    display: flex;
+    padding: 2% 5%;
+    position: absolute;
+    backdrop-filter:blur(2px);
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    border-radius: 5px 5px 0px 5px / 5px 5px 0px 5px ;
+    /* transition: background-color 5s ease-in-out; */
+    /* transition-duration: 3s; */
+
+}
+
+.hovered{
+    /* background-color: lightcoral; */
+}
 
 
 

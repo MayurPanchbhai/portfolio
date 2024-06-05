@@ -34,17 +34,18 @@ function closeHeader(){
 
 
 // project section image effect
-let infoLoad1=document.getElementById("projInfo1");
-let infoCount1=0
-function getBlurInfo(){
-    if (infoCount1%2==0) {
+let Pro1=document.getElementById("project1");
+let infoLoad1=document.getElementById("projInfo1")
+let ProImg =document.getElementById("ProjectImg");
+Pro1.addEventListener("mouseenter" , ()=>{
+    // setTimeout(()=>{
+        infoLoad1.classList.add("infoAni");
         infoLoad1.style.display="flex";
-        infoCount1++;
-    }
-    else{
-        infoLoad1.style.display="none";
-        infoCount1++;
-    }
-
+    // },2500)
     
-}
+})
+Pro1.addEventListener("mouseleave" , ()=>{
+    infoLoad1.classList.remove("infoAni");
+    infoLoad1.style.display="none";
+
+})
