@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: Mulish, sans-serif;
+    /* background-color: #2d2e32; */
 }
 html{
     scroll-behavior:smooth;
@@ -295,28 +296,59 @@ main div{
     color: var(--txt2);
     /* text-align: center; */
     display: block;
+    font-size: 1.3rem;
+    text-transform: uppercase;
 }
 
-#project1{
+#project1 {
     width: 80%;
     display: flex;
     /* height: 100%; */
+    /* flex-wrap: wrap; */
     padding: 2%;
     /* justify-content: center; */
     align-items: center;
     
 }
+#project2{
+    margin-top:2%;
+    width: 80%;
+    display: flex;
+    /* height: 100%; */
+    padding: 2%;
+    flex-direction: row-reverse;
+    /* justify-content: center; */
+    align-items: center;
+}
+ 
 
 .projectImage{
-    width: 55%;
+    width: 55vw;
     height: 25vw;
     position: relative;
     border-radius: 20px 20px 0px 20px / 20px 20px 0px 20px ;
+    border: 1px solid var(--txt2);
 }
+.projectImage2{
+    width: 55vw;
+    height: 25vw;
+    position: relative;
+    border-radius: 20px 20px 20px 0px / 20px 20px 20px 0px ;
+    border: 1px solid var(--txt2);
+}
+
 .projectImage img{
     width: 100%;
     height: 100%;
     border-radius: 20px 20px 0px 20px / 20px 20px 0px 20px ;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.projectImage2 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 20px 20px 0px / 20px 20px 20px 0px ;
     position: absolute;
     top: 0;
     left: 0;
@@ -333,13 +365,16 @@ main div{
     justify-content: space-;
 }
 
+#projectHeading {
+    font-size: 2.1vw;
+}
 .projectData label{
-    
+    font-size: 1.4vw;
     margin-top: 3%;
 }
 
 .projectData ul{
-    
+    font-size: 1.2vw;
     margin-left:4%;
     margin-top: 1%;
     line-height: 160%;
@@ -349,14 +384,14 @@ main div{
 
 #projInfo1{
     /* display:none; */
-    /* transition-duration: 3s ; */
+    transition-duration: 3s ;
     display: flex;
     padding: 2% 5%;
     position: absolute;
     backdrop-filter:blur(2px);
     width: -webkit-fill-available;
     height: -webkit-fill-available;
-    border-radius: 5px 5px 0px 5px / 5px 5px 0px 5px ;
+    border-radius: 20px 20px 0px 20px / 20px 20px 0px 20px ;
     /* transition: background-color 5s ease-in-out; */
     /* transition-duration: 3s; */
     flex-direction: column;
@@ -364,10 +399,34 @@ main div{
     align-items: center;
 
 }
+#projInfo2 {
+    /* display:none; */
+    transition-duration: 3s ;
+    display: flex;
+    padding: 2% 5%;
+    position: absolute;
+    backdrop-filter:blur(2px);
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    border-radius: 20px 20px 20px 0px / 20px 20px 20px 0px ;
+    /* transition: background-color 5s ease-in-out; */
+    /* transition-duration: 3s; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
 #projInfo1 p{
     margin:4% 0;
     font-size: 1.7vw;
     color: var(--primary);
+}
+#projInfo2 p{
+    margin:4% 0;
+    font-size: 1.7vw;
+    color: black;
 }
 
 #projInfo1 a{
@@ -378,13 +437,27 @@ main div{
     background-color: var(--primary);
     transition: 500ms ease-in-out;
 }
+#projInfo2 a{
+    border: 2px solid black;
+    padding: 1% 2%;
+    text-decoration: none;
+    border-radius: 5px 5px 5px 0px / 5px 5px 5px 0px ;
+    background-color: black;
+    transition: 500ms ease-in-out;
+    color: var(--primary);
+}
+
 
 #projInfo1 a:hover{
     transform: translateY(-3px);
     color: var(--txt1);
 }
 
-.infoAni{
+#projInfo2 a:hover{
+    transform: translateY(-3px);\
+}
+.infoAni,
+.infoAni2{
     display: flex;
     padding: 2% 5%;
     position: absolute;
@@ -397,10 +470,15 @@ main div{
 
 }
 
-.hovered{
-    /* background-color: lightcoral; */
-}
+/* .hovered{
+    background-color: lightcoral; 
+} */
 
+
+label{
+    color: var(--txt2);
+    font-weight: 600;
+}
 
 
 
@@ -425,6 +503,9 @@ main div{
 @media (max-width :720px){
     #header{
         display: none;
+    }
+    #section-project h2{
+        font-size: 1rem;
     }
     #resDiv{
         display: block;
@@ -472,7 +553,7 @@ main div{
     #headerFPhone div a{
         text-decoration: none;
         text-decoration: none;
-        color: white;
+        color: var(--primary);
         position: absolute;
     }
 
@@ -630,4 +711,29 @@ main div{
         display: flex;
         justify-content: space-between;
     } */
+
+
+    /* project section responsive */
+    #project1{
+        flex-direction: column;
+    }
+    #project2{
+        flex-direction: column;
+    }
+    /* .projectImage{
+        width: 90vw;
+        height: 37vw;
+        position: relative;
+        border-radius: 20px 20px 0px 0px / 20px 20px 0px 0px ;
+        border: 1px solid var(--txt2);
+    }
+    .projectImage img{
+        width: 100%;
+        height: 100%;
+        border-radius: 20px 20px 0px 0px / 20px 20px 0px 0px ;
+        position: absolute;
+        top: 0;
+        left: 0;
+    } */
+
 }

@@ -49,3 +49,19 @@ Pro1.addEventListener("mouseleave" , ()=>{
     infoLoad1.style.display="none";
 
 })
+
+let Pro2=document.getElementById("project2");
+let infoLoad2=document.getElementById("projInfo2")
+let ProImg2 =document.getElementById("ProjectImg2");
+Pro2.addEventListener("mouseenter" , ()=>{
+    // setTimeout(()=>{
+        infoLoad2.classList.add("infoAni2");
+        infoLoad2.style.display="flex";
+    // },2500)
+    
+})
+Pro2.addEventListener("mouseleave" , ()=>{
+    infoLoad2.classList.remove("infoAni2");
+    infoLoad2.style.display="none";
+
+})
