@@ -1,0 +1,462 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+    font-size: 20px;/* unmiversal fot size*/
+
+}
+
+i{
+    color:var(--secondary-col);
+}
+
+:root{
+    --primary-col:#C80036;
+    --secondary-col:#ffffff;
+    --tertury-col:#FF6969; 
+
+    --gradient-col:linear-gradient(
+        130deg,
+        hsl(240deg 100% 34%) 0%,
+        hsl(310deg 81% 42%) 52%,
+        hsl(20deg 63% 50%) 73%,
+        hsl(80deg 62% 51%) 83%,
+        hsl(129deg 81% 45%) 91%,
+        hsl(178deg 100% 40%) 100%
+      );
+}
+
+.main{
+    margin-top: 20px;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    /* align-items: center; */
+    padding: 15px 10px;
+}
+
+
+.sub{
+    width: 400px;
+    height: 650px;
+    background-color: var(--primary-col);
+    border-radius: 15px;
+    padding: 15px 15px;
+}
+
+#sub1{
+    height: 3%;
+}
+
+#sub2{
+    height: 93  %;
+    
+}
+
+.Sub2blur{
+    filter: blur(5px);
+}
+
+
+#center{
+    width: 100%;
+    height: 50%;
+    /* background-color: var(--tertury-col); */
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#center-middle{
+    width: 90%;
+    height: 95%;
+    background-color:var(--tertury-col);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    position: relative;
+}
+
+#thumbnailBack{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 20px;
+    filter: blur(2px);
+    z-index: 2;
+}
+#specialVideo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 20px;
+    filter: blur(2px);
+    z-index: 2;
+    object-fit: cover;
+}
+#middle{
+    width: 200px;
+    height:200px;
+    /* background-color: var(--secondary-col); */
+    border-radius: 50%;
+    border: 5px solid;
+    border-color: var(--secondary-col);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: relative; */
+    z-index: 88;
+    
+}
+
+
+#middle img{
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%); */
+    border-radius: 50%;
+    z-index: 88;
+}
+
+/* rotating img */
+.ro{
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate{
+    100%{
+        transform: rotate(1turn);
+    }
+}
+
+#song{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--secondary-col);
+}
+
+#title{
+    font-size: 1rem;
+}
+
+#author{
+    font-size: 0.6rem;
+    padding-top: 7px;
+}
+#track{
+    margin-top: 44px;
+}
+
+
+#trackLength{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    align-items: center;
+    
+}
+
+#TL{
+    width: 60%;
+    position: relative;
+    /* border:2px solid var(--tertury-col); */
+    border-radius: 17px;
+}
+
+#div1{
+    width: 100%;
+    border:2px solid var(--tertury-col);
+    border-radius: 17px;
+    position: absolute;
+    z-index: 2;
+}
+
+#div2{
+    position: absolute;
+    width: 60%;
+    border: 2px solid var(--secondary-col);
+    z-index: 4;
+    border-radius: 17px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#div2 div{
+    height: 2px;
+    width: 2px;
+    position: absolute;
+    border: 5px solid var(--secondary-col);
+    border-radius: 50%;
+    transform: translateX(2px);
+
+}
+
+#control{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px 70px;
+}
+
+
+
+#forward ,
+#backward{
+    background-color: transparent;
+    border: none;
+
+}
+
+#play-pause{
+    border-radius: 50%;
+    border: 4px solid var(--tertury-col);
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#play{
+    transform: translateX(2px);
+}
+
+
+
+/*range slider */
+.slidecontainer {
+    width: 70%; /* Width of the outside container */
+    display: flex;
+}
+  
+/* The slider itself */
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 5px; /* Specified height */
+    background: white; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    border-radius: 15px;
+}
+  
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+  
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #4c00ff;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+}
+  
+.slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #ffffff; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+
+
+/* timer */
+.timer{
+    display: flex;
+    font-size: 15px;
+}
+
+.time{
+    color: var(--secondary-col);
+    font-size: 0.7rem;
+}
+
+
+
+/* volume control */
+.volumeContiner{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.volumeContiner input{
+    width: 50%;
+    background-color: #00f;
+}
+
+
+
+
+/* volume slider */
+/* General styles for the range input */
+.sliderVol {
+    -webkit-appearance: none; /* Hides the default slider so that custom styles can be added */
+    width: 100%;
+    height: 5px;
+    background: transparent; /* For browsers that do not support the range input styles */
+    outline: none;
+  }
+  
+  /* Webkit browsers */
+  .sliderVol::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: white;
+    border: 0;
+    border-radius: 15px;
+  }
+  
+  .sliderVol::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #4c00ff;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    margin-top: -5px; /* Adjusts for the thumb height so it sits centered */
+  }
+  
+
+
+  
+  
+  
+  .sliderVol::-ms-fill-lower {
+    background: #00f;
+  }
+  
+  .sliderVol::-ms-fill-upper {
+    background: #ccc;
+  }
+  
+  .sliderVol::-ms-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid #000;
+  }
+  
+
+
+@media screen and (min-width: 401px) and (max-width: 560px){
+    
+    .main{
+        padding-top: 0px;
+        margin-top: 95px;
+        
+    } 
+    .sub{
+        /* margin-top: 20px; */
+        transform: translateY(-90px);
+    }
+    
+}
+
+@media screen and (max-width: 400px){
+    .main {
+        margin-top: 30px;
+    }
+}
+    
+
+
+
+
+
+
+/* list of the songs */
+
+#topBar{
+    position: relative;
+}
+
+#topBar i{
+    color: white;
+}
+
+.hideList{
+    display: none;
+}
+
+#list{
+    position: absolute;
+    /* background-color: white; */
+    width: 100%;
+    z-index: 99;
+    top: 21px;
+}
+#icon{
+    /* background-color: white; */
+    width:35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+}
+
+#fullList{
+    /* background-color: rgb(255, 255, 255); */
+    
+    height: 400px;
+    padding: 10px 10px;
+    overflow: auto;
+    border-radius: 15px;
+    color: white;
+}
+#list i{
+    color: black;
+    margin: 5px 10px;
+    font-size: 25px;
+}
+
+#fullList p{
+    text-align: center;
+}
+
+.newList{
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: c; */
+
+    margin-top: 20px;
+}
+
+.newList p{
+    width: 20%;
+}
+
+.highlight {
+    /* background-color: yellow;  */
+    color: black;
+    border: 1px solid var(--secondary-col);
+    border-radius: 15px;
+}
