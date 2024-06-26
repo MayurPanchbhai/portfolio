@@ -59,8 +59,17 @@ a:hover{
 
 #headerFPhone{
     display: none;
+    transition:all 2s ease-in-out;
 }
-
+#headerFPhone div{
+    /* transition:all 2s ease-in-out; */
+    
+}
+.hero-text p{
+    margin-bottom: 4%;
+    width: 77%;
+    color: #767676;
+}
 #fix{
     width: 80%;
     display: flex;
@@ -153,11 +162,7 @@ main div{
     margin-bottom: 4%;
 }
 
-.hero-text p{
-    margin-bottom: 4%;
-    width: 77%;
-    color: #767676;
-}
+
 
 
 
@@ -290,6 +295,7 @@ main div{
     flex-direction: column;
     align-items: center;
     /* height: auto; */
+    margin: 5% 0;
 }
 
 #section-project h2{
@@ -378,6 +384,8 @@ main div{
     margin-left:4%;
     margin-top: 1%;
     line-height: 160%;
+    color: #767676;
+    font-weight: 500;
 }
 
 
@@ -436,6 +444,7 @@ main div{
     border-radius: 5px 5px 0px 5px / 5px 5px 0px 5px ;
     background-color: var(--primary);
     transition: 500ms ease-in-out;
+    font-size: 1.5vw;
 }
 #projInfo2 a{
     border: 2px solid black;
@@ -445,6 +454,7 @@ main div{
     background-color: black;
     transition: 500ms ease-in-out;
     color: var(--primary);
+    font-size: 1.5vw;
 }
 
 
@@ -503,6 +513,9 @@ label{
 @media (max-width :720px){
     #header{
         display: none;
+    }
+    #section-project{
+        margin: 10%;
     }
     #section-project h2{
         font-size: 1rem;
@@ -701,7 +714,6 @@ label{
         width: 95%;
         font-size: larger;
         margin-bottom: 5%;
-        font-weight: lighter;
         color: #767676;
         font-size: 4.4vw;
     }
@@ -714,26 +726,65 @@ label{
 
 
     /* project section responsive */
+    .projectData{
+        width: 90vw;
+    }
     #project1{
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     #project2{
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
-    /* .projectImage{
-        width: 90vw;
-        height: 37vw;
+    .projectImage,
+    .projectImage2{
+        width: 80vw;
+        height: 50vw;
         position: relative;
-        border-radius: 20px 20px 0px 0px / 20px 20px 0px 0px ;
+        border-radius: 20px;
         border: 1px solid var(--txt2);
     }
-    .projectImage img{
+    .projectImage img,
+    .projectImage2 img{
         width: 100%;
         height: 100%;
-        border-radius: 20px 20px 0px 0px / 20px 20px 0px 0px ;
+        border-radius:20px;
         position: absolute;
         top: 0;
         left: 0;
-    } */
+    }
+    #projectHeading{
+        text-align: center;
+        font-size: 5vw;
+    }
+    .projectData label{
+        font-size: 3.5vw;
+    }
 
+    .projectData ul{
+        font-size: 3.4vw;
+    }
+
+    #projInfo1,
+    #projInfo2{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        backdrop-filter: blur(0px);
+    }
+    #projInfo1 p,
+    #projInfo2 p{
+        display: none;
+    }
+    .infoAni,
+    .infoAni2{
+        backdrop-filter:none;
+    }
+
+    #projInfo1 a,
+    #projInfo2 a{
+        border-radius: 5px;
+        font-size: 4vw;
+    }
+
+    
 }
