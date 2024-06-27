@@ -298,6 +298,7 @@ i{
     display: flex;
     justify-content: center;
     padding-top: 30px;
+    align-items: center;
 }
 
 .volumeContiner input{
@@ -305,7 +306,21 @@ i{
     background-color: #00f;
 }
 
+.volumeContiner i{
+    /* width: 20px;
+    height: 20px; */
+    margin: 0 3%;
+}
 
+i:hover{
+    color: #00f;
+}
+
+.newList h1:hover,
+.newList p:hover{
+    /* background-color: azure; */
+    color: #00f;
+}
 
 
 /* volume slider */

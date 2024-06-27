@@ -224,16 +224,31 @@ audio.onpause = function () {
 
 // Volume control
 let volumeSlider = document.getElementById("volumeSlider");
+// icn 
+let muteIcon = document.getElementById("muteicon");
 
 audio.volume = volumeSlider.value / 100;
 volumeSlider.oninput = function () {
     audio.volume = volumeSlider.value / 100;
+    // console.log(volumeSlider.value);
+
+    // adding mute icon
+    if(volumeSlider.value == 0){
+        muteIcon.classList.remove('fa-volume-down');
+        muteIcon.classList.add('fa-volume-mute');
+    }else{
+        muteIcon.classList.add('fa-volume-down');
+        muteIcon.classList.remove('fa-volume-mute');
+    }
 };
+
+
 
 range.oninput = function () {
     audio.currentTime = (range.value / 100) * audio.duration;
     updateTime();
 };
+
 
 
 
