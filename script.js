@@ -65,3 +65,24 @@ Pro2.addEventListener("mouseleave" , ()=>{
     infoLoad2.style.display="none";
 
 })
+
+
+
+
+
+
+
+// email qr code
+
+// Email details
+var email = "mailto:mayurpanchbhai21@gmail.com";
+
+// Generate the QR code
+var qrcode = new QRCode(document.getElementById("qrcode"), {
+    text: email,
+    width: 256, // Increase the width
+    height: 256, // Increase the height
+    colorDark : "#000000", // Dark color
+    colorLight : "#ffffff", // Light color
+    correctLevel : QRCode.CorrectLevel.H // Error correction level
+});
