@@ -801,7 +801,7 @@ label{
     align-items: center;
     /* height: auto; */
     margin: 5% 0;
-    padding-bottom: 200px;
+    padding-bottom: 20px;
 }
 
 
@@ -817,6 +817,7 @@ label{
     display: flex;
     padding-top: 2%;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 #whatsApp{
@@ -824,6 +825,7 @@ label{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
 }
 
 #whatsApp img{
@@ -836,6 +838,12 @@ label{
 
 #whatsApp a{
     cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+#whatsApp a:hover{
+    color: blue;
 }
 
 #qrcode{
@@ -844,3 +852,39 @@ label{
     justify-content: center;
     padding: 20px 3px
 }
+
+
+#social-link{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#social-link h1{
+
+    font-size: 1.3rem;
+}
+
+#social-link button{
+    width: max-content;
+    padding: 5% 8%;
+    margin-top: 5%;
+    font-size: 1rem;
+    background-color: var(--txt2);
+    border: none;
+    border-radius: 5px;
+}
+
+#social-link button a{
+    text-decoration: none;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+
+#social-link button a:hover{
+    color: black;
+}
+
+
+
