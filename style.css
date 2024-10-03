@@ -312,6 +312,7 @@ main div{
 }
 
 #project1 {
+    margin-top:2%;
     width: 80%;
     display: flex;
     /* height: 100%; */
@@ -322,6 +323,16 @@ main div{
     
 }
 #project2{
+    margin-top:2%;
+    width: 80%;
+    display: flex;
+    /* height: 100%; */
+    padding: 2%;
+    flex-direction: row-reverse;
+    /* justify-content: center; */
+    align-items: center;
+}
+#project3{
     margin-top:2%;
     width: 80%;
     display: flex;
@@ -347,6 +358,13 @@ main div{
     border-radius: 20px 20px 20px 0px / 20px 20px 20px 0px ;
     border: 1px solid var(--txt2);
 }
+.projectImage3{
+    width: 55vw;
+    height: 25vw;
+    position: relative;
+    border-radius: 20px 20px 20px 0px / 20px 20px 20px 0px ;
+    border: 1px solid var(--txt2);
+}
 
 .projectImage img{
     width: 100%;
@@ -357,6 +375,14 @@ main div{
     left: 0;
 }
 .projectImage2 img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 20px 20px 0px / 20px 20px 20px 0px ;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.projectImage3 img{
     width: 100%;
     height: 100%;
     border-radius: 20px 20px 20px 0px / 20px 20px 20px 0px ;
@@ -429,9 +455,31 @@ main div{
     align-items: center;
 
 }
+#projInfo3 {
+    /* display:none; */
+    transition-duration: 3s ;
+    display: flex;
+    padding: 2% 5%;
+    position: absolute;
+    backdrop-filter:blur(2px);
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    border-radius: 20px 20px 20px 0px / 20px 20px 20px 0px ;
+    /* transition: background-color 5s ease-in-out; */
+    /* transition-duration: 3s; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
 
 
 #projInfo1 p{
+    margin:4% 0;
+    font-size: 1.7vw;
+    color: var(--primary);
+}
+#projInfo3 p{
     margin:4% 0;
     font-size: 1.7vw;
     color: var(--primary);
@@ -442,11 +490,21 @@ main div{
     color: black;
 }
 
+
 #projInfo1 a{
     border: 2px solid var(--primary);
     padding: 1% 2%;
     text-decoration: none;
     border-radius: 5px 5px 0px 5px / 5px 5px 0px 5px ;
+    background-color: var(--primary);
+    transition: 500ms ease-in-out;
+    font-size: 1.5vw;
+}
+#projInfo3 a{
+    border: 2px solid var(--primary);
+    padding: 1% 2%;
+    text-decoration: none;
+    border-radius: 5px 5px 5px 0px / 5px 5px 5px 0px ;
     background-color: var(--primary);
     transition: 500ms ease-in-out;
     font-size: 1.5vw;
@@ -467,12 +525,18 @@ main div{
     transform: translateY(-3px);
     color: var(--txt1);
 }
+#projInfo3 a:hover{
+    transform: translateY(-3px);
+    color: var(--txt1);
+}
 
 #projInfo2 a:hover{
     transform: translateY(-3px);
 }
 .infoAni,
-.infoAni2{
+.infoAni2,
+.infoAni3
+{
     display: flex;
     padding: 2% 5%;
     position: absolute;
@@ -740,8 +804,12 @@ label{
     #project2{
         flex-direction: column-reverse;
     }
+    #project3{
+        flex-direction: column-reverse;
+    }
     .projectImage,
-    .projectImage2{
+    .projectImage2,
+    .projectImage3{
         width: 80vw;
         height: 50vw;
         position: relative;
@@ -749,7 +817,8 @@ label{
         border: 1px solid var(--txt2);
     }
     .projectImage img,
-    .projectImage2 img{
+    .projectImage2 img,
+    .projectImage3 img{
         width: 100%;
         height: 100%;
         border-radius:20px;
@@ -770,23 +839,27 @@ label{
     }
 
     #projInfo1,
-    #projInfo2{
+    #projInfo2,
+    #projInfo3{
         display: flex;
         justify-content: end;
         align-items: center;
         backdrop-filter: blur(0px);
     }
     #projInfo1 p,
-    #projInfo2 p{
+    #projInfo2 p,
+    #projInfo3 p{
         display: none;
     }
     .infoAni,
-    .infoAni2{
+    .infoAni2,
+    .infoAni3{
         backdrop-filter:none;
     }
 
     #projInfo1 a,
-    #projInfo2 a{
+    #projInfo2 a,
+    #projInfo3 a{
         border-radius: 5px;
         font-size: 4vw;
     }

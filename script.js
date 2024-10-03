@@ -50,6 +50,36 @@ Pro1.addEventListener("mouseleave" , ()=>{
 
 })
 
+
+
+
+
+
+
+
+
+let Pro3=document.getElementById("project3");
+let infoLoad3=document.getElementById("projInfo3")
+let ProImg3 =document.getElementById("ProjectImg");
+Pro3.addEventListener("mouseenter" , ()=>{
+    // setTimeout(()=>{
+        infoLoad3.classList.add("infoAni");
+        infoLoad3.style.display="flex";
+    // },2500)
+    
+})
+Pro3.addEventListener("mouseleave" , ()=>{
+    infoLoad3.classList.remove("infoAni");
+    infoLoad3.style.display="none";
+
+})
+
+
+
+
+
+
+
 let Pro2=document.getElementById("project2");
 let infoLoad2=document.getElementById("projInfo2")
 let ProImg2 =document.getElementById("ProjectImg2");
